@@ -46,5 +46,5 @@ Compile and Execute the files :
   - else attempt a Blocking move.
   - else occupy Corner position.
   - else fill any random edge position.
-  - <br>  
+  <br>  
   Altough this algorithm is not as efficient as Minimax - it successfully serves it's purpose - i.e. either the Computer Wins or the game ends in a Tie.
