@@ -39,7 +39,7 @@ Compile and Execute the files :
 
 ### Features
 - Autofills the last remaining position
-- Easy mode's algorithm : Blocks the user from winning; otherwise, fills a random position.
+- Easy mode's algorithm : Attempt a winning or blocking move; otherwise, fill a random position.
 - Hard mode's algorithm :
   - Ocuupy centre position if available.
   - else attempt a Winning Move.
