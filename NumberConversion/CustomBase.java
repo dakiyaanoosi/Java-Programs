@@ -11,35 +11,6 @@ class CustomBase
         System.out.print("Base (1-36) : ");
         String base=sc.nextLine();
         base=base.trim();
-        // while(true)
-        // {
-        //     if(base.equals("0") || base.isEmpty() || base.length()>2)
-        //     {
-        //         System.out.print("Base (1-36) : ");
-        //     }
-        //     else if(base.length()==1)
-        //     {
-        //         if(!Character.isDigit(base.charAt(0)))
-        //         {
-        //             System.out.print("Base (1-36) : ");
-        //         }
-        //         else break;
-        //     }
-        //     else if(base.length()==2)
-        //     {
-        //         if(!Character.isDigit(base.charAt(0)) || !Character.isDigit(base.charAt(1)))
-        //         {
-        //             System.out.print("Base (1-36) : ");
-        //         }
-        //         else if(Integer.parseInt(base)>36)
-        //         {
-        //             System.out.print("Base (1-36) : ");
-        //         }
-        //         else break;
-        //     }
-        //     base=sc.nextLine();
-        // }
-        // Simplifying the above logic.......
         while(true)
         {
             try
@@ -64,37 +35,6 @@ class CustomBase
 
     static boolean check(String num,int base)
     {
-        // int start=0;
-        // if(num.charAt(0)=='-')
-        // start=1;
-        // if(base<=10)
-        // {
-        //     for(int i=start;i<num.length();i++)
-        //     {
-        //         if(Character.isDigit(num.charAt(i)))
-        //         {
-        //             if(num.charAt(i)-'0'>(base-1))
-        //             return false;
-        //         }
-        //     }
-        // }
-        // else
-        // {
-        //     for(int i=start;i<num.length();i++)
-        //     {
-        //         if(Character.isLetter(num.charAt(i)))
-        //         {
-        //             if(num.charAt(i)<65 || num.charAt(i)>65+(base-10)-1)
-        //             {
-        //                 return false;
-        //             }
-        //         }
-        //         else if(!(Character.isDigit(num.charAt(i))))
-        //         return false;
-        //     }
-        // }
-        // return true;
-        //Simplification of the above logic............
         try
         {
             new BigInteger(num,base);
@@ -130,6 +70,14 @@ class CustomBase
 
         BigInteger bg=new BigInteger(number,from);
         System.out.println("Result : "+bg.toString(To));
+
+        System.out.println("\n1.Press ENTER to Convert again\n2.Type Anything & press ENTER to STOP");
+        String input=sc.nextLine();
+        if(!input.isEmpty())
+        {
+            return;
+        }
+        convert();
     }
 
     public static void main(String[] args)
